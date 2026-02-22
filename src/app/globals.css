@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lele-navy: #1B3B6F;
+  --color-lele-navy-dark: #0F2A4A;
+  --color-lele-orange: #FAAC25;
+  --color-lele-orange-dark: #D4900F;
+  --color-lele-cream: #FFF9F0;
+  --color-lele-light-blue: #E8F4FD;
+  --color-lele-white: #FFFFFF;
+  --color-lele-gray: #6B7280;
+  --color-lele-gray-light: #F3F4F6;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
