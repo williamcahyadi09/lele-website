@@ -1,11 +1,11 @@
-## ADDED Requirements
+## MODIFIED Requirements
 
 ### Requirement: Section headline
 The dream team section SHALL display a "Tim Kami" pill badge and "Our Dream Team" heading using Ostania font.
 
 #### Scenario: Badge renders
 - **WHEN** the dream team section loads
-- **THEN** a "Tim Kami" pill badge with cream background and orange bold text SHALL be visible above the heading
+- **THEN** a "Tim Kami" pill badge with orange border and orange text SHALL be visible above the heading
 
 #### Scenario: Headline renders
 - **WHEN** the dream team section loads
@@ -27,7 +27,7 @@ The dream team section SHALL display three teacher profile cards with rectangula
 - **THEN** team member cards SHALL stack vertically
 
 ### Requirement: Team member card content
-Each team member card SHALL display a rectangular photo area with decorative orange wave background, name in bold Poppins, and title in Poppins below the photo.
+Each team member card SHALL display a rectangular photo area with decorative orange wave background, name in Ostania font, and title in Poppins below the photo.
 
 #### Scenario: Rara Lao Shi card
 - **WHEN** the dream team section renders

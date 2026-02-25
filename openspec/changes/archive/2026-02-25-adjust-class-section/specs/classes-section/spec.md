@@ -1,4 +1,4 @@
-## ADDED Requirements
+## MODIFIED Requirements
 
 ### Requirement: Section headline
 The classes section SHALL display a headline inviting visitors to choose a class. There SHALL be no subtitle label above the heading.
@@ -51,12 +51,12 @@ Each class card SHALL contain a header area, a description paragraph, a "Yang Ka
 - **AND** a description text below the title
 
 ### Requirement: Class CTA buttons
-Each class card SHALL have a "Lihat Detail Kelas" button with a blue style that links to the consultation page.
+Each class card SHALL have a "Lihat Detail Kelas" button with a blue gradient style that links to the consultation page.
 
 #### Scenario: CTA button display
 - **WHEN** the classes section renders
 - **THEN** each card SHALL display a "Lihat Detail Kelas" button at the bottom
-- **AND** the button SHALL use a blue background
+- **AND** the button SHALL use a blue gradient background (from #2E5AAF to #21337B)
 - **AND** the button SHALL have rounded-full styling with white text
 
 #### Scenario: CTA button interaction
