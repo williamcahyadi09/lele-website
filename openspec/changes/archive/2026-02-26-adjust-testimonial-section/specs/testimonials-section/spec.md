@@ -1,4 +1,4 @@
-## ADDED Requirements
+## MODIFIED Requirements
 
 ### Requirement: Section headline
 The testimonials section SHALL display a heading without a label above it, on a white background.

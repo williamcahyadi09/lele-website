@@ -5,22 +5,19 @@ import { useRouter } from "next/navigation";
 
 const team = [
   {
-    name: "Kana Lue Shi",
-    title: "Lead Mandarin Instructor",
-    image: "/images/team-kana.jpg",
-    initials: "K",
+    name: "Rara Lao Shi",
+    title: "Juara Nasional Chinese Bridge 2023",
+    image: "/images/team-img.png",
   },
   {
-    name: "Tiariff Lue Shi",
-    title: "Senior Mandarin Teacher",
-    image: "/images/team-tiariff.jpg",
-    initials: "T",
+    name: "Farell Lao Shi",
+    title: "Juara Nasional Chinese Bridge 2023",
+    image: "/images/team-img.png",
   },
   {
-    name: "Nikkie Lue Shi",
-    title: "Mandarin Teacher",
-    image: "/images/team-nikkie.jpg",
-    initials: "N",
+    name: "Metta Lao Shi",
+    title: "Juara Nasional Chinese Bridge 2023",
+    image: "/images/team-img.png",
   },
 ];
 
@@ -29,56 +26,63 @@ export default function DreamTeamSection() {
 
   return (
     <section className="py-16 md:py-24">
-      <div className="mx-auto max-w-[1200px] px-4 md:px-16">
-      {/* Header */}
-      <div className="mb-12 text-center">
-        <p className="text-sm font-semibold uppercase tracking-widest text-lele-orange mb-3">
-          Tim Kami
-        </p>
-        <h2 className="text-3xl font-extrabold text-lele-navy md:text-4xl">
-          Our <span className="text-lele-orange">Dream Team</span>
-        </h2>
-        <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-lele-gray">
-          Guru-guru berpengalaman yang siap menemanimu belajar Mandarin dengan
-          cara yang fun dan efektif.
-        </p>
-      </div>
+      <div className="mx-auto max-w-[960px] px-4 md:px-16">
+        {/* Header */}
+        <div className="mb-12 text-center">
+          <span className="inline-block rounded-full bg-lele-cream px-4 py-1 font-poppins text-sm font-bold text-lele-orange mb-4">
+            Tim Kami
+          </span>
+          <h2 className="font-ostania text-[39px] leading-[44px] text-lele-primary-800">
+            Our{" "}
+            <span className="text-lele-orange">Dream Team</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-[637px] font-poppins text-base leading-relaxed text-lele-neutral-700">
+            Sering ditanya, &lsquo;Apa sih rahasia Le Le Mandarin?&rsquo; Jawabannya simpel: tim kami!
+            Setiap anggota membawa &lsquo;Otak&rsquo; (keahlian unik&mdash;dari juara kompetisi hingga veteran)
+            dan &lsquo;Jiwa&rsquo; (passion untuk berbagi kecintaan pada Bahasa &amp; Budaya Mandarin).
+            Yuk, kenali mereka lebih dekat!
+          </p>
+        </div>
 
-      {/* Team grid */}
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
-        {team.map((member) => (
-          <div
-            key={member.name}
-            className="flex flex-col items-center gap-4 rounded-2xl border border-lele-gray-light bg-white px-6 py-10 text-center shadow-sm"
+        {/* Team grid */}
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+          {team.map((member) => (
+            <div
+              key={member.name}
+              className="aspect-[340/359] flex flex-col overflow-hidden rounded-xl border border-lele-neutral-50 bg-white"
+            >
+              {/* Photo area — fills remaining space */}
+              <div className="relative flex-1 bg-[url('/images/team-card-bg.png')] bg-cover bg-center">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+
+              {/* Name & title */}
+              <div className="aspect-[340/103] px-5 flex flex-col justify-center shrink-0 border-t border-lele-neutral-50">
+                <h3 className="font-ostania text-xl text-[#2c2c2c]">
+                  {member.name}
+                </h3>
+                <p className="mt-0.5 font-poppins text-xs text-lele-gray">
+                  {member.title}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div className="mt-10 text-center">
+          <button
+            onClick={() => router.push("/tim")}
+            className="cursor-pointer rounded-full bg-[#2E5AAF] px-8 py-3.5 font-poppins text-sm font-bold text-white transition-opacity hover:opacity-90"
           >
-            {/* Photo */}
-            <div className="relative h-28 w-28 overflow-hidden rounded-full bg-lele-light-blue">
-              <Image
-                src={member.image}
-                alt={member.name}
-                fill
-                className="object-cover"
-              />
-              {/* Fallback initials shown via CSS if image fails — handled by bg */}
-            </div>
-
-            <div>
-              <h3 className="text-lg font-bold text-lele-navy">{member.name}</h3>
-              <p className="mt-1 text-sm text-lele-gray">{member.title}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* CTA */}
-      <div className="mt-12 text-center">
-        <button
-          onClick={() => router.push("/tim")}
-          className="cursor-pointer rounded-full border-2 border-lele-navy px-8 py-3.5 text-sm font-semibold text-lele-navy transition-colors hover:bg-lele-navy hover:text-white"
-        >
-          Kenalan dengan Tim Kami
-        </button>
-      </div>
+            Kenalan Sama Dream Team Kami!
+          </button>
+        </div>
       </div>
     </section>
   );

@@ -1,67 +1,105 @@
+"use client";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const pillars = [
   {
-    tag: "Pop",
-    title: "Pop Culture Advance",
-    desc: "Mandarin jadi gampang lewat lagu, drama, dan film yang kamu suka. Otak lebih mudah menyerap kosakata baru lewat konteks yang familiar.",
-    image: "/images/method-popculture.jpg",
-    imageAlt: "Pop culture approach to learning Mandarin",
-    bg: "bg-lele-light-blue",
+    title: "Memory Science Jitu",
+    desc: "Lupakan hafalan kaku! Kami gunakan teknik mnemonics, chunking, dan active recall yang terbukti secara ilmiah agar materi 'klik' dan nempel permanen.",
+    image: "/images/memory-science.png",
+    imageAlt: "Memory science approach to learning Mandarin",
   },
   {
-    tag: "Filosofi",
-    title: "Filosofi Alam & Karakter Bahasa",
-    desc: "Setiap karakter Mandarin punya cerita. Dengan memahami asal-usul dan filosofi di balik karakter, kamu hafal lebih lama dan lebih dalam.",
-    image: "/images/method-philosophy.jpg",
-    imageAlt: "Chinese character philosophy",
-    bg: "bg-lele-cream",
+    title: "Pop Culture Kekinian",
+    desc: "Bosan dengan contoh kalimat di buku yang gitu-gitu aja? Kami pakai referensi C-Drama terbaru, meme yang lagi viral, dan bahasa gaul biar tetap seru!",
+    image: "/images/pop-culture.png",
+    imageAlt: "Pop culture approach to learning Mandarin",
+  },
+  {
+    title: "Filosofi Kuno & Konteks Budaya",
+    desc: "Bedah filosofi di balik karakter, pahami trivia sejarah, dan kuasai tata krama praktis agar kamu bisa berbicara dengan percaya diri dan penuh pemahaman.",
+    image: "/images/filosofi-kuno.png",
+    imageAlt: "Chinese philosophy and cultural context",
   },
 ];
 
+function PhotoCard({ title, desc, image, imageAlt }: (typeof pillars)[0]) {
+  return (
+    <div className="flex flex-col overflow-hidden rounded-[12px] border border-[#efefef] bg-white h-full">
+      <div className="flex flex-col gap-2 p-5">
+        <h3 className="text-xl font-semibold text-[#1a1a1a]">{title}</h3>
+        <p className="text-xs leading-relaxed text-[#464646]">{desc}</p>
+      </div>
+      <div className="relative mt-auto h-48 w-full flex-1 min-h-[160px]">
+        <Image src={image} alt={imageAlt} fill className="object-cover" />
+      </div>
+    </div>
+  );
+}
+
 export default function MethodSection() {
+  const router = useRouter();
+
   return (
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-[1200px] px-4 md:px-16">
-      {/* Header */}
-      <div className="mb-12 text-center">
-        <p className="text-sm font-semibold uppercase tracking-widest text-lele-orange mb-3">
-          Metode Kami
-        </p>
-        <h2 className="text-3xl font-extrabold text-lele-navy md:text-4xl">
-          Kami Merancang Metode Le Le
-          <br className="hidden md:block" /> untuk Belajar Mandarin
-        </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-lele-gray">
-          Le Le Method menggabungkan ilmu memori modern, budaya pop, dan filosofi
-          karakter Mandarin — agar belajar terasa fun dan bekasnya tahan lama.
-        </p>
-      </div>
+        {/* Cream wrapper */}
+        <div className="rounded-[20px] bg-[#fef7ec] px-4 py-12 md:px-10">
+          {/* Header */}
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl font-extrabold text-lele-navy md:text-4xl">
+              Kami Merancang Metode Le Le
+              <br className="hidden md:block" /> untuk Belajar Mandarin
+            </h2>
+          </div>
 
-      {/* Pillars */}
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-        {pillars.map((pillar) => (
-          <div key={pillar.title} className="overflow-hidden rounded-2xl border border-lele-gray-light bg-white shadow-sm">
-            {/* Image area */}
-            <div className={`relative h-64 w-full ${pillar.bg}`}>
-              <Image
-                src={pillar.image}
-                alt={pillar.imageAlt}
-                fill
-                className="object-cover"
-              />
+          {/* Cards */}
+          <div className="flex flex-col gap-6">
+            {/* Row 1: Dream Team (480) + Memory Science (532) — height 331 */}
+            <div className="flex flex-col gap-6 md:flex-row md:h-[331px]">
+              {/* Our Dream Team card — flex ratio 480 */}
+              <div className="flex w-full flex-col overflow-hidden rounded-[12px] border border-[#efefef] bg-white p-5 md:[flex:480]">
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-xl font-semibold">
+                    <span className="text-[#1a1a1a]">Our </span>
+                    <span className="text-[#faac25]">Dream Team</span>
+                  </h3>
+                  <p className="text-xs leading-relaxed text-[#464646]">
+                    Sering ditanya, &apos;Apa sih rahasia Le Le Mandarin?&apos; Jawabannya simpel: tim kami! Setiap anggota membawa &apos;Otak&apos; (keahlian unik—dari juara kompetisi hingga veteran) dan &apos;Jiwa&apos; (passion untuk berbagi kecintaan pada Bahasa &amp; Budaya Mandarin).
+                  </p>
+                  <div className="mt-2 flex items-start justify-between">
+                    <button
+                      onClick={() => router.push("/tentang-kami")}
+                      className="w-fit cursor-pointer rounded-full bg-gradient-to-b from-[#2e5aaf] to-[#21337b] px-4 py-2 text-xs font-bold text-white"
+                    >
+                      Kenalan sama Laoshi!
+                    </button>
+                    <Image src="/images/method-teacher.png" alt="Le Le Dream Team" width={194} height={159} />
+                  </div>
+                </div>
+              </div>
+
+              {/* Memory Science card — flex ratio 532 */}
+              <div className="md:[flex:532]">
+                <PhotoCard {...pillars[0]} />
+              </div>
             </div>
-            {/* Content */}
-            <div className="flex flex-col gap-3 p-6">
-              <span className="w-fit rounded-full bg-lele-orange/10 px-3 py-1 text-xs font-semibold text-lele-orange">
-                {pillar.tag}
-              </span>
-              <h3 className="text-lg font-bold text-lele-navy">{pillar.title}</h3>
-              <p className="text-sm leading-relaxed text-lele-gray">{pillar.desc}</p>
+
+            {/* Row 2: Pop Culture (532) + Filosofi (480) — height 314 */}
+            <div className="flex flex-col gap-6 md:flex-row md:h-[314px]">
+              {/* Pop Culture card — flex ratio 532 */}
+              <div className="md:[flex:532]">
+                <PhotoCard {...pillars[1]} />
+              </div>
+
+              {/* Filosofi card — flex ratio 480 */}
+              <div className="md:[flex:480]">
+                <PhotoCard {...pillars[2]} />
+              </div>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
       </div>
     </section>
   );

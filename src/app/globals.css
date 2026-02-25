@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Ostania";
+  src: url("/fonts/Ostania.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-lele-navy: #1B3B6F;
   --color-lele-navy-dark: #0F2A4A;
@@ -10,6 +18,20 @@
   --color-lele-white: #FFFFFF;
   --color-lele-gray: #6B7280;
   --color-lele-gray-light: #F3F4F6;
+  --color-lele-primary-800: #2C4195;
+  --color-lele-primary-50: #F1F6FE;
+  --color-lele-neutral-700: #464646;
+  --color-lele-neutral-50: #EFEFEF;
 
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-ostania: "Ostania", Georgia, serif;
+}
+
+@layer utilities {
+  .font-poppins {
+    font-family: var(--font-poppins-gf), ui-sans-serif, system-ui, sans-serif;
+  }
+  .font-albert-sans {
+    font-family: var(--font-albert-sans-gf), ui-sans-serif, system-ui, sans-serif;
+  }
 }
