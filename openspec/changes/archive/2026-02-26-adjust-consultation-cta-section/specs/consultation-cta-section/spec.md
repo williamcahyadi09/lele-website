@@ -1,4 +1,4 @@
-## ADDED Requirements
+## MODIFIED Requirements
 
 ### Requirement: Section headline
 The consultation CTA section SHALL display a headline promoting the free E-book offer.
@@ -20,13 +20,7 @@ The consultation CTA section SHALL display a form with labeled input fields for 
 - **WHEN** the consultation CTA section loads
 - **THEN** a button with the text "Download FREE E-Book!" SHALL be visible within the form card
 
-### Requirement: Form is UI-only
-The consultation form SHALL render correctly but MAY submit without backend integration in this version.
-
-#### Scenario: Form renders without errors
-- **WHEN** the consultation CTA section loads
-- **THEN** the form SHALL render with no console errors
-- **AND** all input fields SHALL be interactive (typeable/selectable)
+## ADDED Requirements
 
 ### Requirement: E-book section description
 The consultation CTA section SHALL display a paragraph describing the free E-book offer below the headline.
@@ -48,3 +42,4 @@ The consultation CTA section SHALL display a decorative illustration on the left
 #### Scenario: Illustration renders on desktop
 - **WHEN** the consultation CTA section loads on a viewport of 768px or wider
 - **THEN** a decorative illustration area SHALL be visible to the left of the form content
+- **AND** the illustration SHALL include a speech bubble element containing the Chinese character "学习"

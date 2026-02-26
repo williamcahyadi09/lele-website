@@ -1,4 +1,4 @@
-## Requirements
+## MODIFIED Requirements
 
 ### Requirement: Full-width CTA banner
 The final CTA section SHALL use a visually distinct dark navy background to signal a closing call-to-action, and SHALL include vertical padding to separate it from adjacent sections.
@@ -37,6 +37,8 @@ The final CTA section SHALL include a student image on the LEFT side of the sect
 #### Scenario: Image renders on desktop
 - **WHEN** the viewport width is 768px or above
 - **THEN** a student image SHALL be visible to the LEFT of the headline and buttons
+
+## ADDED Requirements
 
 ### Requirement: Image speech bubble overlays
 The student image area SHALL display decorative "学习!" speech bubble elements overlaid on the image.
