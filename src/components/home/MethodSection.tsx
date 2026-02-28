@@ -27,9 +27,9 @@ const pillars = [
 function PhotoCard({ title, desc, image, imageAlt }: (typeof pillars)[0]) {
   return (
     <div className="flex flex-col overflow-hidden rounded-[12px] border border-[#efefef] bg-white h-full">
-      <div className="flex flex-col gap-2 p-5">
-        <h3 className="text-xl font-semibold text-[#1a1a1a]">{title}</h3>
-        <p className="text-xs leading-relaxed text-[#464646]">{desc}</p>
+      <div className="flex flex-col gap-2 p-5 text-center md:text-left">
+        <h3 className="text-2xl font-ostania tracking-wide text-[#1a1a1a]">{title}</h3>
+        <p className="text-xs font-poppins leading-relaxed text-[#464646]">{desc}</p>
       </div>
       <div className="relative mt-auto h-48 w-full flex-1 min-h-[160px]">
         <Image src={image} alt={imageAlt} fill className="object-cover" />
@@ -47,8 +47,8 @@ export default function MethodSection() {
         {/* Cream wrapper */}
         <div className="rounded-[20px] bg-[#fef7ec] px-4 py-12 md:px-10">
           {/* Header */}
-          <div className="mb-10 text-center">
-            <h2 className="text-3xl font-extrabold text-lele-navy md:text-4xl">
+          <div className="mb-10 text-center font-ostania tracking-wider">
+            <h2 className="text-3xl font-medium text-lele-navy md:text-4xl">
               Kami Merancang Metode Le Le
               <br className="hidden md:block" /> untuk Belajar Mandarin
             </h2>
@@ -60,18 +60,18 @@ export default function MethodSection() {
             <div className="flex flex-col gap-6 md:flex-row md:h-[331px]">
               {/* Our Dream Team card — flex ratio 480 */}
               <div className="flex w-full flex-col overflow-hidden rounded-[12px] border border-[#efefef] bg-white p-5 md:[flex:480]">
-                <div className="flex flex-col gap-2">
-                  <h3 className="text-xl font-semibold">
+                <div className="flex flex-col gap-2 text-center md:text-left font-ostania">
+                  <h3 className="text-2xl font-medium tracking-wide">
                     <span className="text-[#1a1a1a]">Our </span>
                     <span className="text-[#faac25]">Dream Team</span>
                   </h3>
-                  <p className="text-xs leading-relaxed text-[#464646]">
+                  <p className="text-xs font-poppins leading-relaxed text-[#464646]">
                     Sering ditanya, &apos;Apa sih rahasia Le Le Mandarin?&apos; Jawabannya simpel: tim kami! Setiap anggota membawa &apos;Otak&apos; (keahlian unik—dari juara kompetisi hingga veteran) dan &apos;Jiwa&apos; (passion untuk berbagi kecintaan pada Bahasa &amp; Budaya Mandarin).
                   </p>
                   <div className="mt-2 flex items-start justify-between">
                     <button
                       onClick={() => router.push("/tentang-kami")}
-                      className="w-fit cursor-pointer rounded-full bg-gradient-to-b from-[#2e5aaf] to-[#21337b] px-4 py-2 text-xs font-bold text-white"
+                      className="w-fit cursor-pointer rounded-full bg-gradient-to-b from-[#2e5aaf] to-[#21337b] px-4 py-2 text-xs font-poppins font-semibold text-white"
                     >
                       Kenalan sama Laoshi!
                     </button>

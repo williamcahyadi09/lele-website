@@ -19,7 +19,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-lele-white">
+    <nav className="w-full bg-lele-white font-poppins font-bold">
       <div className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-4 md:px-16">
         {/* Logo */}
         <Link href="/" className="flex items-center">
@@ -40,16 +40,16 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative text-sm font-medium transition-colors ${
-                  isActive
-                    ? "text-lele-navy"
-                    : "text-lele-gray hover:text-lele-navy"
-                }`}
+                className="relative isolate text-l font-medium text-black"
               >
-                {link.label}
                 {isActive && (
-                  <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-lele-navy" />
+                  <span
+                    className="absolute -inset-x-2 -inset-y-1 -z-10 bg-no-repeat bg-center"
+                    style={{ backgroundImage: "url('/images/navbar-active.png')", backgroundSize: "100% 100%" }}
+                    aria-hidden="true"
+                  />
                 )}
+                {link.label}
               </Link>
             );
           })}
@@ -58,7 +58,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <button
           onClick={() => router.push("/konsultasi")}
-          className="hidden cursor-pointer rounded-full bg-lele-navy px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-lele-navy-dark md:block"
+          className="hidden cursor-pointer rounded-full bg-lele-primary-800 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-lele-navy-dark md:block"
         >
           Mulai Sekarang!
         </button>
@@ -98,10 +98,15 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-base font-medium ${
-                    isActive ? "text-lele-navy" : "text-lele-gray"
-                  }`}
+                  className="relative isolate text-base font-medium text-black"
                 >
+                  {isActive && (
+                    <span
+                      className="absolute -inset-x-2 -inset-y-2 -z-10 bg-no-repeat"
+                      style={{ backgroundImage: "url('/images/navbar-active.png')", backgroundSize: "contain" }}
+                      aria-hidden="true"
+                    />
+                  )}
                   {link.label}
                 </Link>
               );

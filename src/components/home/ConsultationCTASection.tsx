@@ -25,12 +25,12 @@ export default function ConsultationCTASection() {
 
           {/* Right: Content + Form */}
           <div className="w-full flex-2">
-            <h2 className="text-3xl font-ostania text-lele-navy md:text-4xl">
+            <h2 className="text-3xl font-ostania text-lele-navy md:text-4xl text-center md:text-left">
               Yuk Ngintip{" "}
               <span className="text-lele-orange">Resep Rahasia</span>{" "}
               Kami!
             </h2>
-            <p className="mt-4 font-poppins text-base leading-relaxed text-lele-gray">
+            <p className="mt-4 font-poppins text-base leading-relaxed text-lele-gray text-center md:text-left">
               Di E-book eksklusif ini, kami bongkar 7+ karakter dasar yang
               ternyata cuma GAMBAR. Pelajari &ldquo;Metode Le Le&rdquo; mengungkap logika
               visual tersembunyi agar kosakata langsung &lsquo;klik&rsquo; dan nempel

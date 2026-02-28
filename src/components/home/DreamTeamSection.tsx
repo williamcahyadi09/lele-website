@@ -63,10 +63,10 @@ export default function DreamTeamSection() {
 
               {/* Name & title */}
               <div className="aspect-[340/103] px-5 flex flex-col justify-center shrink-0 border-t border-lele-neutral-50">
-                <h3 className="font-ostania text-xl text-[#2c2c2c]">
+                <h3 className="font-ostania text-xl text-[#2c2c2c] text-center">
                   {member.name}
                 </h3>
-                <p className="mt-0.5 font-poppins text-xs text-lele-gray">
+                <p className="mt-0.5 font-poppins text-xs text-lele-gray text-center">
                   {member.title}
                 </p>
               </div>

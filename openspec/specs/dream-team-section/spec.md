@@ -41,6 +41,10 @@ Each team member card SHALL display a rectangular photo area with decorative ora
 - **WHEN** the dream team section renders
 - **THEN** a card for "Metta Lao Shi" SHALL be visible with photo, name, and title "Juara Nasional Chinese Bridge 2023"
 
+#### Scenario: Card name and title are center-aligned on mobile
+- **WHEN** the viewport width is below 768px
+- **THEN** each team member card's name and title text SHALL be horizontally centered below the photo
+
 ### Requirement: Team section CTA
 The dream team section SHALL display a filled blue CTA button "Kenalan Sama Dream Team Kami!" below the team grid.
 

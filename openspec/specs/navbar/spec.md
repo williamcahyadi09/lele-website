@@ -16,7 +16,9 @@ The navbar SHALL display navigation links: Beranda, Program Kami, Tentang Kami, 
 
 #### Scenario: Active page indicator
 - **WHEN** the user is on a page matching a navigation link
-- **THEN** that link SHALL display an underline indicator to show active state
+- **THEN** that link SHALL display the `navbar-active.png` brushstroke image as a background behind the link text
+- **AND** the active link text SHALL be black in color
+- **AND** no underline indicator SHALL be shown
 
 ### Requirement: Primary CTA button
 The navbar SHALL display a "Mulai Sekarang!" (Start Now) call-to-action button on the right side.
