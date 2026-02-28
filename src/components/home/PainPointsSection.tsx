@@ -22,11 +22,11 @@ export default function PainPointsSection() {
   return (
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-[1200px] px-4 md:px-16">
-        <div className="text-center mb-14">
-          <h2 className="text-2xl font-bold text-lele-navy md:text-3xl">
+        <div className="text-center mb-14 font-ostania tracking-wide">
+          <h2 className="text-2xl text-lele-navy md:text-3xl">
             Pernah Merasa Belajar Mandarin Itu...
           </h2>
-          <p className="text-4xl font-extrabold text-lele-orange md:text-5xl mt-1">
+          <p className="text-4xl text-lele-orange md:text-5xl mt-1">
             Menyiksa?
           </p>
         </div>
@@ -45,8 +45,8 @@ export default function PainPointsSection() {
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-lg font-bold text-black">{point.title}</h3>
-              <p className="text-sm leading-relaxed text-lele-gray">{point.desc}</p>
+              <h3 className="text-2xl font-ostania text-black">{point.title}</h3>
+              <p className="text-sm font-poppins leading-relaxed text-black">{point.desc}</p>
             </div>
           ))}
         </div>

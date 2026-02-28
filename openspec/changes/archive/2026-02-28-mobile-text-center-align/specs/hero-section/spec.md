@@ -1,4 +1,4 @@
-## ADDED Requirements
+## MODIFIED Requirements
 
 ### Requirement: Tag badge
 The hero section SHALL display a small tag badge above the headline with the text "STOP HAFAL MATI!" on a contrasting background.
